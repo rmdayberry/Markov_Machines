@@ -15,12 +15,12 @@ class MarkovMachine {
    *  {"the": ["cat", "hat"], "cat": ["in"], "in": ["the"], "hat": [null]} */
 
   makeChains() {
-    for (let i = 0; i < this.words.length; i++) {
-      let word = this.words[i];
-      let nextWord = this.words[i + 1] || null;
+    for(let i=0; i<this.words.length; i++){
+      let word= this.words[i];
+      let nextWord = this.words.[i+1] || null;
 
-      if (!this.chains[word]) {
-        this.chains[word] = [];
+      if(!this.chains[word]){
+        this.chains[word]=[];
       }
       this.chains[word].push(nextWord);
     }
@@ -29,16 +29,6 @@ class MarkovMachine {
   /** return random text from chains */
 
   makeText(numWords = 100) {
-    const randomWord = arr[Math.floor(Math.random() * arr.length)];
-
-    let keys = Object.keys(this.chains);
-    let key = randomWord(keys);
-    let output = [];
-
-    while (output.length < numWords && key !== null) {
-      output.push(key);
-      key = randomWord(this.chains[key]);
-    }
-    return output.join(" ");
+    const randomWord
   }
 }
