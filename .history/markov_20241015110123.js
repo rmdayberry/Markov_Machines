@@ -35,8 +35,8 @@ class MarkovMachine {
   /** return random text from chains */
 
   makeText(numWords = 100) {
-    const startWords = this.words.filter((word) => /^[A-Z]/.test(word));
-
+    const startWords = this.words.filter(word => /^[A-Z].test(word));
+    
     let result = [];
     let word = this.words[Math.floor(Math.random() * this.words.length)];
     while (result.length < numWords && word !== null) {
